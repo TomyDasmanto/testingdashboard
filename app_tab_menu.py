@@ -830,13 +830,7 @@ def render_simulasi_fiskal_editor() -> pd.DataFrame:
 
 def render_simulasi_makro_editor() -> pd.DataFrame:
     st.markdown("### Simulasi Asumsi Dasar Ekonomi Makro")
-    st.caption(
-        "Tabel di bawah ini diletakkan di Blok Fiskal, tepat di bawah tabel fiskal. "
-        "Kolom APBN 2026 bersifat tetap, sedangkan kolom Shock sengaja dikosongkan agar dapat diisi untuk simulasi. "
-        "Shock Pertumbuhan ekonomi (%) sudah terhubung ke Penerimaan Perpajakan, dan shock "
-        "Lifting Gas Bumi sudah terhubung ke Penerimaan Perpajakan serta PNBP pada Blok Fiskal."
-    )
-
+    
     if "simulasi_makro_editor_version" not in st.session_state:
         st.session_state["simulasi_makro_editor_version"] = 0
 
