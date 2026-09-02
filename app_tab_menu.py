@@ -1138,12 +1138,7 @@ def render_fiskal_block_table(simulasi_makro_df: Optional[pd.DataFrame] = None):
     )
 
     st.markdown(html_tbl, unsafe_allow_html=True)
-    st.caption(
-        "Format tabel fiskal menampilkan kolom APBN 2026, Dampak, dan Outlook, dengan struktur A/B/C/D dan sub-uraian. "
-        "Shock Pertumbuhan ekonomi (%) memengaruhi Penerimaan Perpajakan. "
-        "Shock Lifting Gas Bumi memengaruhi Penerimaan Perpajakan dan PNBP secara linear terhadap deviasi dari APBN 2026."
-    )
-
+    
 
 # =========================
 # Charts
