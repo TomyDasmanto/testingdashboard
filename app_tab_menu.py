@@ -306,21 +306,6 @@ def open_excel_source(source: Union[str, bytes, bytearray]):
     return pd.ExcelFile(source, engine="openpyxl")
 
 
-def detect_excel_source() -> Tuple[Optional[Union[str, bytes]], str]:
-    local_path = Path(__file__).resolve().parent / REPO_FILE_NAME
-    if local_path.exists():
-        return str(local_path), f"Sumber data otomatis: {local_path.name} di folder repo"
-    if GITHUB_RAW_XLSX_URL:
-        return (
-            load_excel_bytes_from_url(GITHUB_RAW_XLSX_URL),
-            "Sumber data otomatis: GitHub Raw URL dari st.secrets['github_raw_xlsx_url']",
-        )
-    return (
-        None,
-        "File Excel belum ditemukan. Simpan dashboard PDB.xlsx di root repo yang sama dengan app.py, "
-        "atau isi st.secrets['github_raw_xlsx_url']."
-    )
-
 
 # =========================
 # PDB builder from 'realisasi'
