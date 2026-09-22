@@ -1070,8 +1070,8 @@ def apply_simulasi_makro_icp_to_pdb(
 
     # Contoh: Target 70,0 dan Shock 70,7 berarti ICP naik 1%.
     icp_change_pct = ((float(shock) / float(target)) - 1.0) * 100.0
-    export_change_pct = icp_change_pct * 1.19
-    import_change_pct = icp_change_pct * 0.89
+    export_change_pct = icp_change_pct * 0.02
+    import_change_pct = icp_change_pct * 0.08
 
     exp_mask = work["indikator"].astype(str).str.strip() == "Ekspor"
     imp_mask = work["indikator"].astype(str).str.strip() == "Impor"
