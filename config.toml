@@ -1,0 +1,7 @@
+# Simpan sebagai .streamlit/config.toml di root repo (opsional, agar toggle/aksen tidak merah)
+[theme]
+primaryColor = "#1A3A6B"
+backgroundColor = "#F5F7FA"
+secondaryBackgroundColor = "#FFFFFF"
+textColor = "#0F1C35"
+font = "sans serif"
