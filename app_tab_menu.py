@@ -873,8 +873,8 @@ def apply_simulasi_makro_to_pdb_nominal(
     target_icp, shock_icp = get_target_and_shock("ICP (USD/barrel)")
     if target_icp is not None and shock_icp is not None and target_icp != 0:
         perubahan_icp_persen = ((shock_icp / target_icp) - 1.0) * 100.0
-        delta_ekspor = perubahan_icp_persen * 323.97
-        delta_impor = perubahan_icp_persen * 1449.95
+        delta_ekspor = perubahan_icp_persen * 314.72
+        delta_impor = perubahan_icp_persen * 1408.53
         add_full_year("Ekspor", delta_ekspor)
         add_full_year("Impor", delta_impor)
         total_delta_pdb += delta_ekspor - delta_impor
